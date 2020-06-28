@@ -70,3 +70,51 @@ var a = 'b';
 
 a = 'a'; 
 console.log(a);
+
+
+
+
+//**Arrow Functions, Promesas y Parámetros en objetos**
+
+let name = 'oscar';
+let age =32;
+
+obj = {name: name, age:age};
+
+//es6
+obj1 = {name,age};
+
+console.log(obj);
+
+//arrow functions (:
+
+
+const names = [
+    {name:'paulina', age :24},
+    {name:'pauli', age :42}
+]
+
+let listNames = names.map(function(item){
+    console.log(item.name);
+})
+
+let lisofnames2 = names.map(item => console.log(item.name, item.age));
+
+const lisOfNames3 = (name,age,country) => {
+    //...
+}
+
+const helloPromice = () => {
+    return new Promise((resolve,reject)=>{
+        if(true){
+            resolve('hey!');
+        }else{
+            reject("ups");
+        }
+    }
+    );
+}
+
+helloPromice()
+.then(response =>console.log(response))
+.catch(error=> console.log(error));
